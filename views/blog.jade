@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.header
+		.logo 
+		span 失眠宇宙's Blog
+	.container.markdown-body
+		h2 #{blog.title}
+		p.tips 
+			span #{blog.time}
+			a
+				span #{blog.category}
+		!= mdContent
+   

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	.header
+		.logo 
+		span 失眠宇宙's Blog
+	.container
+		.blogList
+			for blog,key in index
+				div.blogArea
+					div.blog
+						div.thumbnail 
+							a(href="/blog/"+key)
+								if blog.imageUrl
+									img.poster(src=blog.imageUrl)
+								else
+									span #{blog.title}
+						div.info
+							a(href="/blog/"+key)
+								h4.title #{blog.title}
+							a.tag #{blog.category}
+							span.tag.pull-right #{blog.time}
+
+   
