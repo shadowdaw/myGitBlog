@@ -1,4 +1,4 @@
-![信物](http://mmbiz.qpic.cn/mmbiz/kQhicVOHvVoW53smiaYaF5Nsgwc803lIVKziaoTWjjK59MMFVPWwibj4MgOGtRY0mEkt4BRlfIajzTnO8m0seuev8A/640?wx_fmt=jpeg&tp=webp&wxfrom=5)
+![信物](http://owyx09dkb.bkt.clouddn.com/image/love.jpg)
 
 1.多年以后他夜晚独自坐着轻铁驶过待开发的郊区时
 仍然会记起靠在他肩头的姑娘望着漆黑的窗外稀稀拉拉的灯光
