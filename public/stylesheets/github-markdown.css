@@ -638,8 +638,8 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
+  background-color: #d9d9d9; 
+  border-radius: 12px;
 }
 
 .markdown-body pre code {
