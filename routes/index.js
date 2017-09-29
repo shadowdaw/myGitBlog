@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Insomnia-er',index:index });
+    var category = req.query.category;
+    res.render('index', { title: 'Insomnia-er', index: index });
 });
 
 module.exports = router;
