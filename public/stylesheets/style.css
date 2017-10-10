@@ -436,8 +436,13 @@ body {
     left: 0;
     transform: translateY(-50%);
     width: 100%;
+    transition:transform 500ms;
+
 }
 
+.blog .thumbnail:hover .poster { 
+    transform: translateY(-50%) scale(1.2,1.2); 
+}
 .blog .info {
     padding: 16px;
 }
