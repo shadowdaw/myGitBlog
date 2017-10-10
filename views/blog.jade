@@ -3,7 +3,8 @@ extends layout
 block content
 	.header
 		.logo 
-		span 失眠宇宙's Blog
+		a(href="/")
+			span 失眠宇宙's Blog
 	.container.markdown-body
 		h2 #{blog.title}
 		p.tips 
@@ -11,4 +12,7 @@ block content
 			a
 				span #{blog.category}
 		!= mdContent 
+	p.end END
+	.footer
+		span 失眠的时候宇宙和我说的心事.
    

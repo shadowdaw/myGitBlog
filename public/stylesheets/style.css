@@ -7,6 +7,7 @@
 
 
 
+
 /** 清除内外边距 **/
 
 body,
@@ -22,6 +23,7 @@ blockquote,
 
 
 
+
 /* structural elements 结构元素 */
 
 dl,
@@ -33,9 +35,11 @@ li,
 
 
 
+
 /* list elements 列表元素 */
 
 pre,
+
 
 
 
@@ -50,6 +54,7 @@ textarea,
 
 
 
+
 /* form elements 表单元素 */
 
 th,
@@ -60,6 +65,7 @@ td
     margin: 0;
     padding: 0;
 }
+
 
 
 
@@ -97,6 +103,7 @@ var {
 
 
 
+
 /* 将斜体扶正 */
 
 code,
@@ -105,6 +112,7 @@ pre,
 samp {
     font-family: courier new, courier, monospace;
 }
+
 
 
 
@@ -118,6 +126,7 @@ small {
 
 
 
+
 /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
 
@@ -127,6 +136,7 @@ ul,
 ol {
     list-style: none;
 }
+
 
 
 
@@ -149,11 +159,13 @@ a:hover {
 
 
 
+
 /** 重置表单元素 **/
 
 legend {
     color: #000;
 }
+
 
 
 
@@ -168,6 +180,7 @@ img {
 
 
 
+
 /* img 搭车：让链接里的 img 无边框 */
 
 button,
@@ -176,6 +189,7 @@ select,
 textarea {
     font-size: 100%;
 }
+
 
 
 
@@ -356,16 +370,27 @@ body {
 }
 
 .header {
-    max-width: 900px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #f7f8fa; 
     padding: 15px 10px;
     margin-right: auto;
     margin-left: auto; // border-bottom: 1px solid #EEE;
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 24px;    
+    box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
+}
+.header span{
     color: #8c8c8c;
 }
-
 .logo {
     width: 50px;
     height: 50px;
@@ -382,6 +407,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     margin-top: 18px;
+    padding-top: 80px;
 }
 
 .more {
@@ -436,13 +462,13 @@ body {
     left: 0;
     transform: translateY(-50%);
     width: 100%;
-    transition:transform 500ms;
-
+    transition: transform 500ms;
 }
 
-.blog .thumbnail:hover .poster { 
-    transform: translateY(-50%) scale(1.2,1.2); 
+.blog .thumbnail:hover .poster {
+    transform: translateY(-50%) scale(1.2, 1.2);
 }
+
 .blog .info {
     padding: 16px;
 }
@@ -469,6 +495,20 @@ body {
     color: #8c8c8c
 }
 
-#uyan_frame{
+.footer {  
+    padding: 25px 0;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+.end {
+    padding: 20px 0; 
+    font-size: 18px;
+    color: #8c8c8c;
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+}
+
+#uyan_frame {
     height: 400px;
 }
