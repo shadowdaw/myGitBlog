@@ -1,4 +1,12 @@
 {
+    "hello-younger-me":
+    {
+        "title": "你好，少年",
+        "tag": "talk",
+        "category": "杂谈",
+        "time": "2017-09-28",
+        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/youth.jpg"
+    },
     "common-date-story":
     {
         "title": "普通相亲故事",

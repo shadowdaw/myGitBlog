@@ -18,7 +18,7 @@ block content
 						div.info
 							a(href="/blog/"+key)
 								h4.title #{blog.title}
-							a.tag #{blog.category}
+							a.tag(href='/?tag='+blog.tag) #{blog.category}
 							span.tag.pull-right #{blog.time}
 
    
