@@ -6,12 +6,21 @@ var marked = require('marked');
 
 /* GET users listing. */
 router.get('/*', function(req, res, next) {
-    var filename = path.join(__dirname, '../blogs' + req.url); 
-    fs.readFile(filename + '.md', function(err, data) {
-        var html = marked(data.toString());
-        var blog=index[req.url.substr(1)];
-        res.render('blog', {"title":blog.title,blog:blog,mdContent: html });
-    })
+    var filename = path.join(__dirname, '../blogs' + req.url) + '.md';
+    fs.exists(filename, (exists) => {
+        if (exists) {
+            fs.readFile(filename, function(err, data) {
+                if (err) {
+                    res.render('error', { "title": '错误', message: '文章不存在!' })
+                }
+                var html = marked(data.toString());
+                var blog = index[req.url.substr(1)];
+                res.render('blog', { "title": blog.title, blog: blog, mdContent: html });
+            })
+        } else {
+            res.render('error', { "title": '错误', message: '文章不存在!' });
+        }
+    });
 });
 
 module.exports = router;
