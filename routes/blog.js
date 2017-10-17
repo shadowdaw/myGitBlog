@@ -12,10 +12,13 @@ router.get('/*', function(req, res, next) {
             fs.readFile(filename, function(err, data) {
                 if (err) {
                     res.render('error', { "title": '错误', message: '文章不存在!' })
-                    return; 
+                    return;
                 }
                 var html = marked(data.toString());
                 var blog = index[req.url.substr(1)];
+                if (!blog) {
+                    res.render('error', { "title": '错误', message: '文章不存在!' })
+                }
                 res.render('blog', { "title": blog.title, blog: blog, mdContent: html });
             })
         } else {
