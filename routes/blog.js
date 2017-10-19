@@ -7,6 +7,10 @@ var marked = require('marked');
 /* GET users listing. */
 router.get('/*', function(req, res, next) {
     var filename = path.join(__dirname, '../blogs' + req.url) + '.md';
+    var blog = index[req.url.substr(1)];
+    if (!blog) {
+        return res.render('error', { "title": '错误', message: '文章不存在!' })
+    }
     fs.exists(filename, (exists) => {
         if (exists) {
             fs.readFile(filename, function(err, data) {
@@ -15,10 +19,6 @@ router.get('/*', function(req, res, next) {
                     return;
                 }
                 var html = marked(data.toString());
-                var blog = index[req.url.substr(1)];
-                if (!blog) {
-                    res.render('error', { "title": '错误', message: '文章不存在!' })
-                }
                 res.render('blog', { "title": blog.title, blog: blog, mdContent: html });
             })
         } else {
