@@ -2,7 +2,14 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var path = require('path');
-var marked = require('marked');
+var marked = require('marked'); 
+
+marked.setOptions({
+  highlight: function (code) {
+    return require("highlight").Highlight(code);
+  }
+});
+
 
 /* GET users listing. */
 router.get('/*', function(req, res, next) {
