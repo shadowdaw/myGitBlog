@@ -12,9 +12,10 @@ marked.setOptions({
 
 
 /* GET users listing. */
-router.get('/*', function(req, res, next) {
-    var filename = path.join(__dirname, '../blogs' + req.url) + '.md';
-    var blog = index[req.url.substr(1)];
+router.get('/*', function(req, res, next) { 
+    var blogName=req._parsedUrl.pathname; 
+    var filename = path.join(__dirname, '../blogs' + blogName) + '.md';
+    var blog = index[blogName.substr(1)];
     if (!blog) {
         return res.render('error', { "title": '错误', message: '文章不存在!' })
     }
