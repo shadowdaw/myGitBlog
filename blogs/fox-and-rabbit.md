@@ -1,3 +1,4 @@
+![fox-rabbit](http://owyx09dkb.bkt.clouddn.com/rf.jpg)
 ### Chapter I
 
 狐狸一直以为自己是森林里最聪明的动物，即使是最富有经验的猎人，也从来没有办法追到他尾巴上的一根毛。
