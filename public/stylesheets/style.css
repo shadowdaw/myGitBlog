@@ -387,6 +387,10 @@ body {
     -moz-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
     -ms-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
     -o-box-shadow: 0  2px 3px rgba(0, 0, 0, 0.05);
+    transition:top 500ms;
+}
+.scroll .header{
+    top:-58px;
 }
 .header span{
     color: #8c8c8c;

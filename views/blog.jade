@@ -16,5 +16,15 @@ block content
 	.footer
 		span 我记录的都是“那时候的我真傻逼”的证据.
 		div.imgarea
-			img.footerimg(src='http://owyx09dkb.bkt.clouddn.com/image/pay2comment.jpg')   
+			img.footerimg(src='http://owyx09dkb.bkt.clouddn.com/image/pay2comment.jpg')
+	script.
+		var scrolltop=0;
+		window.onscroll = function(e){
+			var tempscrolltop=document.documentElement.scrollTop||document.body.scrollTop;
+			if(tempscrolltop>scrolltop && tempscrolltop>60){
+				document.body.className='scroll'
+			}else{
+				document.body.className=''
+			}
+		}  
    
