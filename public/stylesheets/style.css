@@ -500,6 +500,16 @@ body {
     text-align: center;
     color: #8c8c8c;
 }
+.imgarea{
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.imgarea .footerimg{
+    width: 300px;
+    height: 300px;
+}
 
 .end {
     padding: 20px 0; 
