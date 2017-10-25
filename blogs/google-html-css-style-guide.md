@@ -151,7 +151,7 @@ color: #e5e5e5;
 
 # 3 HTML
 
-## 3.1 HTML规范
+## 3.1 HTML语法规范
 
 ### 3.1.1 文档类型
 
@@ -238,7 +238,7 @@ color: #e5e5e5;
 分离结构、表现、行为，对于项目的可维护性至关重要。修改HTML文档和模版总是比修改样式和脚本更为麻烦。 
 
 ```
-<!-- Not recommended -->
+<!-- 不建议使用 -->
 <!DOCTYPE html>
 <title>HTML sucks</title>
 <link rel="stylesheet" href="base.css" media="screen">
@@ -253,7 +253,7 @@ color: #e5e5e5;
   
   
 ```
-<!-- Recommended -->
+<!-- 不建议使用 -->
 <!DOCTYPE html>
 <title>My first CSS-only redesign</title>
 <link rel="stylesheet" href="default.css">
@@ -276,12 +276,12 @@ color: #e5e5e5;
 只有一个例外：在HTML中具有特殊含义的字符 （比如 < 和 & ）或者控制字符和不可见的字符（比如换行符）。
 
 ```
-<!-- Not recommended -->
+<!-- 不建议使用 -->
 The currency symbol for the Euro is &ldquo;&eur;&rdquo;.
 ```
 
 ```
-<!-- Recommended -->
+<!-- 不建议使用 -->
 The currency symbol for the Euro is “€”.
 ```
 
@@ -399,6 +399,385 @@ The currency symbol for the Euro is “€”.
 
 # CSS
 
+## 4.1 CSS语法规范
+
+### 4.1.1 CSS有效性校验 
+
+**尽量使用校验后的CSS文件**
+
+除非因为CSS校验器的Bug或者需要某种特定的样式，否则尽量使用经过校验的CSS代码。 
+
+使用诸如[W3C CSS 校验器](https://jigsaw.w3.org/css-validator/)来做CSS有效性校验。
+
+使用经过有效性校验的CSS代码是代码质量的重要基准，有助于快速找出CSS代码中可能不生效或者可以移除的部分，以确保恰当的CSS用法。
+
+### 4.1.2 ID和Class类名
+
+**使用释义性或者通用性的ID和class类名**
 
 
+ID和class的类名不要使用抽象的或者意义模糊的命名方式，确保使用可以反应出元素具体用途或者其通用性的命名。
+
+首选意义具体，能准确反映出元素用途的命名方式，这样最容易理解并且改动的可能性也最小。
+
+通用命名主要用于一些与其他同级元素没有显著区别的元素，这些元素通常是一些辅助元素。
+
+使用功能性或者通用性的命名可以有效减少不必要的文档修改。
+
+```
+/* 不建议使用: 意义不明确 */
+#yee-1901 {}
+
+/* 不建议使用: 过于抽象 */
+.button-green {}
+.clear {}
+```
+
+```
+/* 不建议使用: 意义明确 */
+#gallery {}
+#login {}
+.video {}
+
+/* 不建议使用: 通用 */
+.aux {}
+.alt {}
+```
+
+### 4.1.3 ID与Class类名风格
+
+**ID和class类名需要确保达意的前提下尽可能的短**。
+
+试着使用一些缩写、摘要来表达ID或class类名的含义。 
+
+这种方式有助于提高代码的可读性和效率。
+
+``` 
+/* 不建议使用 */
+#navigation {}
+.atr {}
+
+```
+
+```
+/* 建议使用 */
+#nav {}
+.author {}
+```
+
+
+### 4.1.4 标签选择器
+
+不要ID或class选择器与标签选择器混合使用。
+
+除非必要（比如辅助类），否则不要在元素标签后连接一个ID或者class类名。
+
+减少不必要的父选择器有助于[提高CSS表现](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/)
+
+```
+/* Not recommended */
+ul#example {}
+div.error {}
+```
+```
+/* Recommended */
+#example {}
+.error {}
+```
+
+### 4.1.5 属性的简写形式
+
+**尽可能使用属性值的简写形式**.
+
+尽可能地使用CSS提供的属性[简写形式](https://www.w3.org/TR/CSS21/about.html#shorthand)（比如`font`）,哪怕只有定义了一个属性值。 
+
+使用属性值的简写形式有助于提供代码执行效率和可读性。
+
+```
+/* Not recommended */
+border-top-style: none;
+font-family: palatino, georgia, serif;
+font-size: 100%;
+line-height: 1.6;
+padding-bottom: 2em;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 0;
+```
+```
+/* Recommended */
+border-top: 0;
+font: 100%/1.6 palatino, georgia, serif;
+padding: 0 1em 2em;
+```
+
+### 4.1.6 0的单位值
+
+**除非必要，省略“0”后面的单位值**. 
+
+```
+flex: 0px; /*flex-basis属性需要写明单位值 . */
+flex: 1 1 0px; /* 可以省略，但是IE11里需要 */
+margin: 0;
+padding: 0;
+```
+
+### 4.1.7 小数前面的 0
+
+**省略大于-1且小于 1的小数前面的 0**. 
+
+```
+font-size: .8em;
+```
+
+### 4.1.8 十六进制色值
+
+**尽量使用3个字符的简写形式的十六进制**.
+
+对于可以缩写成3个字符的十六进制色值，就使用简写形式使其更简洁短小。 
+
+```
+/* Not recommended */
+color: #eebbcc;
+```
+```
+/* Recommended */
+color: #ebc;
+```
+
+### 4.1.9 前缀
+
+**（可选）使用明确的前缀** 
+
+在大型项目、在其他项目中嵌入代码、外部网站等情况下，对ID或class类名使用前缀（作为命名空间）。使用剪短、唯一的标识符，并用短横线`-`连接。 
+
+使用命名空间可以防止命名冲突，也可以使得维护更容易，比如使用搜索／替换操作时。
+
+```
+.adw-help {} /* AdWords */
+#maia-note {} /* Maia */
+```
+
+### 4.1.10 ID 和 Class类名分隔符
+
+在ID 和 Class类名中使用`-`连接符.
+
+为了确保代码的可读性和可扫描性，不要在选择器内使用`-`以外的连接符连接单词，也不要省略连接符。
+
+```
+/* Not recommended: 不要省略 “demo” 和 “image”之间的连接符 */
+.demoimage {} 
+/* Not recommended: 不要使用下划线替代连字符 */
+.error_status {}
+```
+```
+/* Recommended */
+#video-id {}
+.ads-sample {}
+```
+
+### 4.1.11 CSS Hack
+
+不要使用 `userAgent` 检测，也不要使用CSS Hack，先尝试一下别的方案。
+
+使用特定的CSS过滤器，工作环境和CSS Hack来使得不同的样式生效看上去非常诱人。
+
+为了确保代码的效率和可管理性，两种方法都应该作为最后迫不得己的手段考虑。换而言之，使用`userAgent` 检测或CSS Hack很容易破坏项目长期来看的最优化，因为允许使用`userAgent` 检测或CSS Hack就会造成更频繁地使用它们，从而一发不可收拾。
+
+## 4.2 CSS 格式
+
+### 4.2.1 声明顺序
+
+**字母顺序声明**.
+
+使用首字母排序声明属性是一个简单有效的方案使得代码易于维护和保持一致。
+
+排序时忽略不同浏览器提供的前缀属性，但同一属性的不同浏览器前缀仍然按照首字母排序。 (比如 -moz prefix comes before -webkit).
+
+```
+background: fuchsia;
+border: 1px solid;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+color: black;
+text-align: center;
+text-indent: 2em;
+```
+
+### 4.2.2 声明块缩进
+
+**缩进所有的声明块**.
+
+在[声明块](https://www.w3.org/TR/CSS21/syndata.html#block—)里声明另一个声明块时也同样需要遵守这条规则，它反映出样式的等级并提升可读性。
+```
+@media screen, projection {
+
+  html {
+    background: #fff;
+    color: #444;
+  }
+
+}
+```
+
+### 4.2.3 声明语句结尾
+
+**声明语句都应当以分号结尾**.
+
+为了一致性和可扩展性，声明语句都应当以分号结尾。
+
+```
+/* Not recommended */
+.test {
+  display: block;
+  height: 100px
+}
+```
+```
+/* Recommended */
+.test {
+  display: block;
+  height: 100px;
+}
+```
+
+### 4.2.4 属性名结尾
+
+**在属性名的冒号`":"`后面添加一个空格**.
+
+在属性名与属性值之间添加单个空格，（但在属性值和冒号之间不要添加），以保持代码一致。
+
+
+```
+/* Not recommended */
+h3 {
+  font-weight:bold;
+}
+```
+
+```
+/* Recommended */
+h3 {
+  font-weight: bold;
+}
+```
+
+### 4.2.5 声明语句与选择器的分隔
+
+在最后一个选择器与声明块之间使用一个空格.
+
+在最后一个选择器和[声明块](https://www.w3.org/TR/CSS21/syndata.html#rule-sets)的左花括号之间添加单个空白符.
+
+声明块的左花括号和最后一个选择器必须在同一行。
+
+```
+
+/* Not recommended: missing space */
+#video{
+  margin-top: 1em;
+}
+
+/* Not recommended: unnecessary line break */
+#video
+{
+  margin-top: 1em;
+}
+```
+```
+/* Recommended */
+#video {
+  margin-top: 1em;
+}
+```
+
+### 4.2.6 选择器和声明语句分隔
+
+**每一个选择器和声明语句都必须独占一行**。
+
+```
+/* Not recommended */
+a:focus, a:active {
+  position: relative; top: 1px;
+}
+```
+
+```
+/* Recommended */
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+```
+### 4.2.7  CSS规则分隔
+
+**另起一行以分隔两条CSS规则**.
+
+```
+html {
+  background: #fff;
+}
+
+body {
+  margin: auto;
+  width: 50%;
+}
+```
+
+### 4.2.8 CSS引号
+
+**在选择器属性和属性值上使用单引号**.
+
+选择器属性和属性值上使用(`''`)而非使用(`""`) .  在URI值(`url()`)上不要使用引号 .
+
+例外: 如果你要使用 `@charset`，使用双引号：[不推荐使用单引号的原因](https://www.w3.org/TR/CSS21/syndata.html#charset).
+
+```
+/* Not recommended */
+@import url("https://www.google.com/css/maia.css");
+
+html {
+  font-family: "open sans", arial, sans-serif;
+}
+```
+```
+/* Recommended */
+@import url(https://www.google.com/css/maia.css);
+
+html {
+  font-family: 'open sans', arial, sans-serif;
+}
+```
+
+## 4.3 CSS Meta 规则
+
+### 4.3.1 组件注释
+
+**(可选)给组件添加组件注视**.
+
+使用注释来组织组件代码，另起一行以分隔组件.
+
+```
+/* Header */
+
+#adw-header {}
+
+/* Footer */
+
+#adw-footer {}
+
+/* Gallery */
+
+.adw-gallery {}
+```
+
+# 最后的话
+
+**保持一致**.
+
+如果你正在进行编程，花一点看一看项目里已有的代码并鉴别一下代码风格。如果它们在算术运算符周围使用空格，那么你也适用。如果它们用虚线框包裹注释，那么你也用虚线框包裹注释。 
+
+使用代码规范标准的目的是为了有一个统一的语法标准使得人们可以明白你想表达什么而不是关注你表达的方式。我们发布这个公共的规则好让人们都知道这个语法标准，但是本地的标准同样重要。如果你添加的代码和其他人写的代码极其不一样，会让阅读你代码的人产生非常大的困惑。这是应该避免的。
 

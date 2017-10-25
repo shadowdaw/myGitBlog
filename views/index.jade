@@ -12,7 +12,7 @@ block content
 						div.thumbnail 
 							a(href="/blog/"+key)
 								if blog.imageUrl
-									img.poster(src=blog.imageUrl)
+									div.poster(style=`background-image:url(${blog.imageUrl})`)
 								else
 									span #{blog.title}
 						div.info
