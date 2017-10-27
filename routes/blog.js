@@ -3,10 +3,12 @@ var router = express.Router();
 var fs = require('fs');
 var path = require('path');
 var marked = require('marked'); 
+var Highlight=require("highlight");
 
+Highlight.init(function () {}, ['xml','css','javascript']);
 marked.setOptions({
   highlight: function (code) {
-    return require("highlight").Highlight(code);
+    return Highlight.highlight(code);
   }
 });
 

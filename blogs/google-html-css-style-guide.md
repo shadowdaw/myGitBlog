@@ -14,7 +14,7 @@
 
 **一律**使用HTTPS协议(`https:`)引入图片和其他多媒体文件、样式表（CSS文件）、脚本文件（JS文件），除非对应文件无法通过HTTPS协议访问。
 
-```html
+```xml
 <!--不建议使用:省略协议 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!--不建议使用:使用HTTP协议 -->
@@ -23,7 +23,7 @@
 
 
 
-```html
+```xml
 <!-- 建议使用 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 ```
@@ -38,7 +38,7 @@
 ```
 
 
-```CSS
+```css
 /* 建议使用 */
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 ```
@@ -53,7 +53,7 @@
 
 不要使用Tab或者混合使用Tab和空格来缩进。
 
-```html
+```xml
 <ul>
   <li>Fantastic
   <li>Great
@@ -72,11 +72,11 @@
 
 所有代码都必须是小写的：包括HTML元素名，属性，属性值(除了`text/CDATA`),CSS的选择器、属性名和属性值（字符串例外）。 
 
-```html
+```xml
 <!-- 不建议使用 -->
 <A HREF="/">Home</A>
 ```
-```html
+```xml
 <!-- 建议使用 -->
 <img src="google.png" alt="Google">
 ```
@@ -95,11 +95,11 @@ color: #e5e5e5;
 
 空白结尾是不必要的，并且会使得文件差异比较变的复杂
 
-```html
+```xml
 <!--  不建议使用 -->
 <p>What?_
 ```
-```html
+```xml
 <!-- 建议使用：使用标点结尾-->
 <p>Yes please.
 ```
