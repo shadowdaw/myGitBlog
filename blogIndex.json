@@ -1,12 +1,22 @@
-{   
-    "wedding-in-october":{
+{
+    "google-html-css-style-guide":
+    {
+        "title": "谷歌HTML/CSS代码规范",
+        "tag": "code",
+        "category": "编程",
+        "time": "2017-10-27",
+        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/googlerainbow-1.png"
+    },
+    "wedding-in-october":
+    {
         "title": "十月婚礼纪",
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-10-23",
         "imageUrl": "http://owyx09dkb.bkt.clouddn.com/wedding.png"
     },
-    "fox-and-rabbit":{
+    "fox-and-rabbit":
+    {
         "title": "狐狸与兔子",
         "tag": "story",
         "category": "故事",
