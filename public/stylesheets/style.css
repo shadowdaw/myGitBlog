@@ -157,10 +157,12 @@ a,
 a:hover,
 a:link,
 a:visited {
-    color: #000;
     text-decoration: none;
 }
-
+a,
+a:visited {
+    color: #000;
+}
 a:hover {
     color: #6de4a3;
     cursor: pointer;

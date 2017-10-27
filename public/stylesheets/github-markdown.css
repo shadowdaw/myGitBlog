@@ -149,8 +149,13 @@
   -webkit-text-decoration-skip: objects;
 }
 
+.markdown-body a:link,
+.markdown-body a:visited {
+  color: #FFB647;
+}
 .markdown-body a:active,
 .markdown-body a:hover {
+  color: #6de4a3;
   outline-width: 0;
 }
 
@@ -213,7 +218,7 @@
 }
 
 .markdown-body a {
-  color: #0366d6;
+  color: #6de4a3;
   text-decoration: none;
 }
 
