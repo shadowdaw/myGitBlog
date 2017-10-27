@@ -14,7 +14,7 @@
 
 **一律**使用HTTPS协议(`https:`)引入图片和其他多媒体文件、样式表（CSS文件）、脚本文件（JS文件），除非对应文件无法通过HTTPS协议访问。
 
-```HTML
+```html
 <!--不建议使用:省略协议 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!--不建议使用:使用HTTP协议 -->
@@ -23,13 +23,13 @@
 
 
 
-```HTML
+```html
 <!-- 建议使用 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 ```
 
 
-```CSS
+```css
 /* 不建议使用: 省略协议 */
 @import '//fonts.googleapis.com/css?family=Open+Sans'; 
 
@@ -53,14 +53,14 @@
 
 不要使用Tab或者混合使用Tab和空格来缩进。
 
-```
+```html
 <ul>
   <li>Fantastic
   <li>Great
 </ul>
 ```
 
-```
+```css
 .example {
   color: blue;
 }
@@ -72,19 +72,19 @@
 
 所有代码都必须是小写的：包括HTML元素名，属性，属性值(除了`text/CDATA`),CSS的选择器、属性名和属性值（字符串例外）。 
 
-```
+```html
 <!-- 不建议使用 -->
 <A HREF="/">Home</A>
 ```
-```
+```html
 <!-- 建议使用 -->
 <img src="google.png" alt="Google">
 ```
-```
+```css
 /* 不建议使用 */
 color: #E5E5E5;
 ```
-```
+```css
 /* 建议使用 */
 color: #e5e5e5;
 ```
@@ -95,11 +95,11 @@ color: #e5e5e5;
 
 空白结尾是不必要的，并且会使得文件差异比较变的复杂
 
-```
+```html
 <!--  不建议使用 -->
 <p>What?_
 ```
-```
+```html
 <!-- 建议使用：使用标点结尾-->
 <p>Yes please.
 ```
@@ -135,14 +135,14 @@ color: #e5e5e5;
 
 在`TODO`后的括号添加联系人或邮件地址：`TODO(联系方式)`
 
-```
+```html
 {# TODO(john.doe): revisit centering #}
 <center>Test</center>
 ```
 
 在`TODO`后使用冒号并添加代办事项：`TODO：代办事项`
 
-```
+```html
 <!-- TODO: remove optional tags -->
 <ul>
   <li>Apples</li>
@@ -175,13 +175,13 @@ color: #e5e5e5;
 
 使用有效的HTML代码是代码质量的重要基准，而且有助于学习技术要求和规范，并确保恰当的HTML语法。
 
-```
+```html
 <!-- 不建议使用 -->
 <title>Test</title>
 <article>This is only a test.
 ```
 
-```
+```html
 <!-- 建议使用 -->
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -197,12 +197,12 @@ color: #e5e5e5;
 
 按照符合其语义的方式书写HTML 对于代码的可读性，复用性和代码效率而言至关重要。 
 
-```
+```html
 <!-- 不建议使用 -->
 <div onclick="goToRecommendations();">All recommendations</div>
 ```
 
-```
+```html
 <!-- 建议使用 -->
 <a href="recommendations/">All recommendations</a>
 ```
@@ -477,12 +477,12 @@ ID和class的类名不要使用抽象的或者意义模糊的命名方式，确�
 减少不必要的父选择器有助于[提高CSS表现](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/)
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 ul#example {}
 div.error {}
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 #example {}
 .error {}
 ```
@@ -496,7 +496,7 @@ div.error {}
 使用属性值的简写形式有助于提供代码执行效率和可读性。
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 border-top-style: none;
 font-family: palatino, georgia, serif;
 font-size: 100%;
@@ -507,7 +507,7 @@ padding-right: 1em;
 padding-top: 0;
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 border-top: 0;
 font: 100%/1.6 palatino, georgia, serif;
 padding: 0 1em 2em;
@@ -539,11 +539,11 @@ font-size: .8em;
 对于可以缩写成3个字符的十六进制色值，就使用简写形式使其更简洁短小。 
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 color: #eebbcc;
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 color: #ebc;
 ```
 
@@ -567,13 +567,13 @@ color: #ebc;
 为了确保代码的可读性和可扫描性，不要在选择器内使用`-`以外的连接符连接单词，也不要省略连接符。
 
 ```
-/* Not recommended: 不要省略 “demo” 和 “image”之间的连接符 */
+/* 不建议使用: 不要省略 “demo” 和 “image”之间的连接符 */
 .demoimage {} 
-/* Not recommended: 不要使用下划线替代连字符 */
+/* 不建议使用: 不要使用下划线替代连字符 */
 .error_status {}
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 #video-id {}
 .ads-sample {}
 ```
@@ -630,14 +630,14 @@ text-indent: 2em;
 为了一致性和可扩展性，声明语句都应当以分号结尾。
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 .test {
   display: block;
   height: 100px
 }
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 .test {
   display: block;
   height: 100px;
@@ -652,14 +652,14 @@ text-indent: 2em;
 
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 h3 {
   font-weight:bold;
 }
 ```
 
 ```
-/* Recommended */
+/* 建议使用 */
 h3 {
   font-weight: bold;
 }
@@ -675,19 +675,19 @@ h3 {
 
 ```
 
-/* Not recommended: missing space */
+/* 不建议使用: missing space */
 #video{
   margin-top: 1em;
 }
 
-/* Not recommended: unnecessary line break */
+/* 不建议使用: unnecessary line break */
 #video
 {
   margin-top: 1em;
 }
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 #video {
   margin-top: 1em;
 }
@@ -698,14 +698,14 @@ h3 {
 **每一个选择器和声明语句都必须独占一行**。
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 a:focus, a:active {
   position: relative; top: 1px;
 }
 ```
 
 ```
-/* Recommended */
+/* 建议使用 */
 h1,
 h2,
 h3 {
@@ -737,7 +737,7 @@ body {
 例外: 如果你要使用 `@charset`，使用双引号：[不推荐使用单引号的原因](https://www.w3.org/TR/CSS21/syndata.html#charset).
 
 ```
-/* Not recommended */
+/* 不建议使用 */
 @import url("https://www.google.com/css/maia.css");
 
 html {
@@ -745,7 +745,7 @@ html {
 }
 ```
 ```
-/* Recommended */
+/* 建议使用 */
 @import url(https://www.google.com/css/maia.css);
 
 html {
