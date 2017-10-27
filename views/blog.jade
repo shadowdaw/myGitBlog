@@ -5,13 +5,14 @@ block content
 		.logo 
 		a(href="/")
 			span 失眠宇宙's Blog
-	.container.markdown-body
-		h2 #{blog.title}
-		p.tips 
-			span #{blog.time}
-			a
-				span #{blog.category}
-		!= mdContent 
+	.container
+		.markdown-body
+			h2 #{blog.title}
+			p.tips 
+				span #{blog.time}
+				a
+					span #{blog.category}
+			!= mdContent 
 	p.end END
 	.footer
 		span 我记录的都是“那时候的我真傻逼”的证据.
