@@ -2,9 +2,10 @@ extends layout
 
 block content
 	.header
-		.logo 
-		a(href="/")
-			span 失眠宇宙's Blog
+		div.flex
+			div.logo 
+			a(href="/")
+				span 失眠宇宙's Blog
 	.container
 		.markdown-body
 			h2 #{blog.title}

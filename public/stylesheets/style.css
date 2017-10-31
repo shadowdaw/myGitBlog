@@ -1,343 +1,58 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
-
-
-
-
-/** 清除内外边距 **/
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-blockquote,
-
-
-
-
-
-/* structural elements 结构元素 */
-
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-
-
-
-
-
-/* list elements 列表元素 */
-
-pre,
-
-
-
-
-
-/* text formatting elements 文本格式元素 */
-
-form,
-fieldset,
-legend,
-button,
-input,
-textarea,
-
-
-
-
-
-/* form elements 表单元素 */
-
-th,
-td
-/* table elements 表格元素 */
-
-{
+*{
     margin: 0;
     padding: 0;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+ */
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
 }
-
-
-
-
-
 
 /** 设置默认字体 **/
-
 body,
-button,
-input,
-select,
-textarea
-/* for ie */
-
-{
-    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+button, input, select, textarea /* for ie */ {
+  font: 12px/1.5 "SF Pro SC", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 100%;
-}
-
-address,
-cite,
-dfn,
-em,
-var {
-    font-style: normal;
-}
-
-
-
-
-
-
-/* 将斜体扶正 */
-
-code,
-kbd,
-pre,
-samp {
-    font-family: courier new, courier, monospace;
-}
-
-
-
-
-
-
-/* 统一等宽字体 */
-
-small {
-    font-size: 12px;
-}
-
-
-
-
-
-
-/* 小于 12px 的中文很难阅读，让 small 正常化 */
-
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
 /** 重置列表元素 **/
-
-ul,
-ol {
-    list-style: none;
-}
-
-
-
-
-
+ul, ol { list-style: none; }
 
 /** 重置文本格式元素 **/
-
-a,
-a:hover,
-a:link,
-a:visited {
-    text-decoration: none;
-}
-a,
-a:visited {
-    color: #000;
-}
-a:hover {
-    color: #6de4a3;
-    cursor: pointer;
-}
-
-
-
-
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
 
 
 /** 重置表单元素 **/
-
-legend {
-    color: #000;
-}
-
-
-
-
-
-
-/* for ie6 */
-
-fieldset,
-img {
-    border: 0;
-}
-
-
-
-
-
-
-/* img 搭车：让链接里的 img 无边框 */
-
-button,
-input,
-select,
-textarea {
-    font-size: 100%;
-}
-
-
-
-
-
-
-/* 使得表单元素在 ie 下能继承字体大小 */
-
-
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
 /* 注：optgroup 无法扶正 */
 
-
 /** 重置表格元素 **/
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td {
-    margin: 0;
-    padding: 0;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-fieldset,
-img {
-    border: 0;
-}
-
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-th,
-var,
-i {
-    font-style: normal;
-    font-weight: normal;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-caption,
-th {
-    text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 100%;
-    font-weight: normal;
-}
-
-q:before,
-q:after {
-    content: '';
-}
-
-a:focus {
-    outline-style: none;
-}
-
-abbr,
-acronym {
-    border: 0;
-    font-variant: normal;
-}
-
-sup {
-    vertical-align: text-top;
-}
-
-sub {
-    vertical-align: text-bottom;
-}
-
-input,
-textarea,
-select {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    *font-size: 100%;
-}
-
-textarea {
-    resize: none
-}
-
-input::-ms-clear {
-    display: none;
-}
+table { border-collapse: collapse; border-spacing: 0; }
 
 html,
-body {
-    height: 100%;
+body { 
     margin: 0;
     padding: 0;
     font-size: 12px;
@@ -396,6 +111,7 @@ body {
     margin-right: auto;
     margin-left: auto; // border-bottom: 1px solid #EEE;
     display: flex;
+    justify-content:space-between;
     align-items: center;
     font-size: 18px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
@@ -404,6 +120,66 @@ body {
     -ms-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
     -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
     transition: top 500ms;
+}
+.flex{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.menubtn{ 
+    width: 25px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .menubtn {
+        display: none;
+    }
+}
+
+
+.u-icon-menu {
+    display: block;
+    position: relative;
+    height: 1px;
+    margin: 50% 0;
+    width: 100%;
+    background-color: #8c8c8c;
+    transition: transform 300ms;
+}
+
+.u-icon-menu:before,
+.u-icon-menu:after {
+    transition: transform 300ms;
+    background-color: #8c8c8c;
+    position: absolute;
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 1px;
+}
+
+.u-icon-menu:before {
+    transform: translateY(-8px);
+}
+
+.u-icon-menu:after {
+    transform: translateY(8px);
+}
+
+.u-icon-menu.active{
+    background-color: transparent;
+}
+
+.u-icon-menu.active:before{
+    transform: rotate(45deg);
+}
+
+.u-icon-menu.active:after{
+    transform: rotate(-45deg);
 }
 
 .scroll .header {
@@ -421,16 +197,29 @@ body {
     background-image: url("../images/Insomniaer.jpg");
     background-size: cover;
     margin-right: 15px;
-}
-
+} 
 .container {
+    height: 100%;
     max-width: 1000px;
     padding-right: 15px;
     padding-left: 15px;
+    padding-top: 58px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 18px;
-    padding-top: 58px;
+    position: relative;
+}
+.tagList{
+    position: absolute;
+    top: 60px; 
+    left: -40px; 
+}
+.tagList .tags{
+    position: fixed;
+    top: 80px; 
+}
+.tag a{
+    color: #AAA;
 }
 
 @media (max-width: 768px) {
@@ -501,8 +290,11 @@ body {
 .blog .info {
     padding: 16px;
 }
-
-.title:hover {
+.info .title{
+    color: #000;
+    font-weight: normal;
+}
+.info .title:hover {
     cursor: pointer;
     color: #FFB647;
 }
@@ -511,11 +303,15 @@ body {
     color: #8c8c8c;
 }
 
-.tag {
-    line-height: 33px;
+.tag,
+.infotime { 
     font-size: 14px;
     color: #8c8c8c;
     margin-right: 10px;
+}
+.tag:hover{
+    cursor:pointer;
+    color:#6de4a3;
 }
 
 .tips {

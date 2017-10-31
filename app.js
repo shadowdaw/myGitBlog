@@ -10,8 +10,10 @@ var users = require('./routes/users');
 var blog = require('./routes/blog');
 
 var app = express();
+var gm = require('./utils/globalmethod');
 
 global.index=require('./blogIndex');
+global.tags=gm.createTagsByIndex(global.index);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

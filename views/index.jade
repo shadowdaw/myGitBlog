@@ -2,9 +2,20 @@ extends layout
 
 block content
 	.header
-		.logo 
-		span 失眠宇宙's Blog
+		div.flex
+			div.logo 
+			a(href="/")
+				span 失眠宇宙's Blog
+		div#menubtn.menubtn
+			i.u-icon-menu
 	.container
+		div#tags.tagList
+			ul.tags
+				li
+					a.tag(href='/') 全部
+				for tag in tags
+					li
+						a.tag(href='/?tag='+tag.tag) #{tag.category}
 		.blogList
 			for blog,key in index
 				div.blogArea
@@ -19,6 +30,6 @@ block content
 							a(href="/blog/"+key)
 								h4.title #{blog.title}
 							a.tag(href='/?tag='+blog.tag) #{blog.category}
-							span.tag.pull-right #{blog.time}
+							span.infotime.pull-right #{blog.time}
 
    
