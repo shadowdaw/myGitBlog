@@ -1,13 +1,14 @@
 extends layout
 
 block content
+	div#mask.vxbackdrop
 	.header
 		div.flex
 			div.logo 
 			a(href="/")
 				span 失眠宇宙's Blog
-		div#menubtn.menubtn
-			i.u-icon-menu
+		div.menubtn
+			i.u-icon-menu#menubtn
 	.container
 		div#tags.tagList
 			ul.tags
@@ -31,5 +32,23 @@ block content
 								h4.title #{blog.title}
 							a.tag(href='/?tag='+blog.tag) #{blog.category}
 							span.infotime.pull-right #{blog.time}
+	script.
+		var openmenu=function(){
+			if(document.body.className==='open'){
+				document.body.className='';
+				document.getElementById('menubtn').className='u-icon-menu';
+			}else{
+				document.body.className='open';
+				document.getElementById('menubtn').className='u-icon-menu active';
+			}
+		} 
+		window.onload = function() { 
+		    if (document.addEventListener) {
+		        document.getElementById('menubtn').addEventListener('click', openmenu, false);
+		    } else if (document.attachEvent) {
+		        document.getElementById('menubtn').attachEvent('click', openmenu);
+		    }
+		    document.getElementById('mask').addEventListener('click', openmenu, false);
+		};
 
    
