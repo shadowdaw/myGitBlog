@@ -517,10 +517,8 @@ body {
 }
 
 .imgarea {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 10px; 
+    text-align: center;
 }
 
 .imgarea .footerimg {
