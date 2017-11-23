@@ -511,6 +511,7 @@ body {
 }
 
 .footer {
+    display: none;
     padding: 25px 0;
     text-align: center;
     color: #8c8c8c;
@@ -527,6 +528,7 @@ body {
 }
 
 .end {
+    display: none;
     padding: 20px 0;
     font-size: 18px;
     color: #8c8c8c;
