@@ -21,11 +21,11 @@ block content
 			img.footerimg(src='http://owyx09dkb.bkt.clouddn.com/image/pay2comment.jpg')
 	script.
 		var ua = navigator.userAgent.toLowerCase();
-	    if (ua.match(/MicroMessenger/i) == "micromessenger") { 
-	    } else {
-	      document.getElementsByClassName('footer')[0].style.display='none';
-	      document.getElementsByClassName('end')[0].style.display='none';
-	    }
+		if (ua.match(/MicroMessenger/i) == "micromessenger") { 
+		} else {
+			document.getElementsByClassName('footer')[0].style.display='none';
+			document.getElementsByClassName('end')[0].style.display='none';
+		}
 		var scrolltop=0;
 		window.onscroll = function(e){
 			var tempscrolltop=document.documentElement.scrollTop||document.body.scrollTop;
