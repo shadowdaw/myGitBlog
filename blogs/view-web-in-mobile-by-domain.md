@@ -1,3 +1,6 @@
+![phone-p](http://owyx09dkb.bkt.clouddn.com/phone-pc.jpg)
+
+
 如今有大量的项目运行在手机端，其中又有相当大一部分运行在微信内，调试的过程中一般都以Chrome Devtool的手机模拟调试为主，在微信中的项目则可以使用[微信开发工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)进行开发调试并预览页面表现。
 
 但最终在真机上仍然会遇到种种Bug，我们仍然希望在开发时就可以通过移动端访问本地开发项目。并且这也是我一直倡导的观念：在开发阶段就尽可能模拟生产环境以提前发现问题。
