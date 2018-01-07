@@ -1,5 +1,13 @@
 {
-     "view-web-in-mobile-by-domain":
+    "smoking-drinking-pretending":
+    {
+        "title": "抽烟，饮酒与消愁",
+        "tag": "talk",
+        "category": "杂谈",
+        "time": "2018-1-7",
+        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/wine.jpg"
+    },
+    "view-web-in-mobile-by-domain":
     {
         "title": "Mobile Web 调试指南（在移动端通过域名访问本地项目）",
         "tag": "code",
