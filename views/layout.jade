@@ -7,10 +7,13 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
-  script(src="https://www.googletagmanager.com/gtag/js?id=UA-107208737-1",async)
-  script.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-107208737-1');
+    script(type='text/javascript', src='http://res.wx.qq.com/open/js/jweixin-1.2.0.js')
+    script(type='text/javascript', src='/javascripts/wxshare.js')
+    script(src="https://www.googletagmanager.com/gtag/js?id=UA-107208737-1",async)
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-107208737-1');
+
 

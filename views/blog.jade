@@ -35,5 +35,14 @@ block content
 				document.body.className=''
 			}
 			scrolltop=tempscrolltop;
-		}  
+		} 
+		window.onload = function() {
+			getWechatConifg();
+			prepareShare({
+				title: '#{blog.title}',
+				summary: '#{blog.title}',
+				shareUrl: window.location.href,
+				imgUrl: '#{blog.imageUrl}'
+			})
+		};
    
