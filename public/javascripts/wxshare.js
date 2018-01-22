@@ -40,7 +40,7 @@ function getWechatConifg() {
         function(res) {
             var wxconfig = res; 
             wx.config({
-                debug: true,
+                debug: false,
                 appId: wxconfig.appId,
                 timestamp: wxconfig.timestamp,
                 nonceStr: wxconfig.nonceStr,
