@@ -61,8 +61,8 @@ Photo by [Clay Banks](https://unsplash.com/photos/hwLAI5lRhdM?utm_source=unsplas
 
 我几乎不定目标，因为定了我也会忘记。所以这次，定几个容易办的事情。
 
-[ ] 纹一个纹身
-[ ] 玩一次蹦极
-[ ] 去一次日本
-[ ] 想到了再补充
+* [ ] 纹一个纹身
+* [ ] 玩一次蹦极
+* [ ] 去一次日本
+* [ ] 想到了再补充
 
