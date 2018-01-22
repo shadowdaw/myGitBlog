@@ -1,11 +1,19 @@
 {
+    "something-about-me":
+    {
+        "title": "那就聊聊自己吧",
+        "tag": "talk",
+        "category": "杂谈",
+        "time": "2018-1-22",
+        "imageUrl": "http://static.insomnia-er.com/japan.jpg"
+    },
     "css-in-js":
     {
         "title": "编&译:「CSS in JS」就像是用你最喜爱的锤子换掉你老旧的螺丝刀",
         "tag": "code",
         "category": "编程",
         "time": "2018-1-17",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/one-does-not-simply.jpg"
+        "imageUrl": "http://static.insomnia-er.com/one-does-not-simply.jpg"
     },
     "smoking-drinking-pretending":
     {
@@ -13,7 +21,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2018-1-7",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/wine.jpg"
+        "imageUrl": "http://static.insomnia-er.com/wine.jpg"
     },
     "view-web-in-mobile-by-domain":
     {
@@ -21,7 +29,7 @@
         "tag": "code",
         "category": "编程",
         "time": "2017-12-14",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/phone-pc.jpg"
+        "imageUrl": "http://static.insomnia-er.com/phone-pc.jpg"
     },
     "weeding-in-november":
     {
@@ -29,7 +37,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-11-27",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/ccy.jpeg"
+        "imageUrl": "http://static.insomnia-er.com/ccy.jpeg"
     },
     "first-impression-of-beijing":
     {
@@ -37,7 +45,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-11-22",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/beijing.jpg"
+        "imageUrl": "http://static.insomnia-er.com/beijing.jpg"
     },
     "lover-prattle-in-werewolf":
     {
@@ -45,7 +53,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-11-01",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/werewolf.jpg"
+        "imageUrl": "http://static.insomnia-er.com/werewolf.jpg"
     },
     "google-html-css-style-guide":
     {
@@ -53,7 +61,7 @@
         "tag": "code",
         "category": "编程",
         "time": "2017-10-27",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/googlerainbow-1.png"
+        "imageUrl": "http://static.insomnia-er.com/googlerainbow-1.png"
     },
     "wedding-in-october":
     {
@@ -61,7 +69,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-10-23",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/wedding.png"
+        "imageUrl": "http://static.insomnia-er.com/wedding.png"
     },
     "fox-and-rabbit":
     {
@@ -69,7 +77,7 @@
         "tag": "story",
         "category": "故事",
         "time": "2017-10-19",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/rf.jpg"
+        "imageUrl": "http://static.insomnia-er.com/rf.jpg"
     },
     "the-best-way-to-push-child-get-marry":
     {
@@ -77,7 +85,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-10-17",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/lovelock.png"
+        "imageUrl": "http://static.insomnia-er.com/lovelock.png"
     },
     "hello-younger-me":
     {
@@ -85,7 +93,7 @@
         "tag": "talk",
         "category": "杂谈",
         "time": "2017-09-28",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/youth.jpg"
+        "imageUrl": "http://static.insomnia-er.com/youth.jpg"
     },
     "common-date-story":
     {
@@ -93,7 +101,7 @@
         "tag": "story",
         "category": "故事",
         "time": "2015-12-20",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/image/dating.jpg"
+        "imageUrl": "http://static.insomnia-er.com/image/dating.jpg"
     },
     "common-love-story":
     {
@@ -101,7 +109,7 @@
         "tag": "story",
         "category": "故事",
         "time": "2015-11-27",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/image/love.jpg"
+        "imageUrl": "http://static.insomnia-er.com/image/love.jpg"
     },
     "love-story-in-kitchen":
     {
@@ -109,6 +117,6 @@
         "tag": "story",
         "category": "故事",
         "time": "2015-11-24",
-        "imageUrl": "http://owyx09dkb.bkt.clouddn.com/image/kitchen.jpg"
+        "imageUrl": "http://static.insomnia-er.com/image/kitchen.jpg"
     }
 }

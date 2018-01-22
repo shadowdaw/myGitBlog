@@ -3,6 +3,7 @@
 
 
 原文载于 [zendev.com](https://zendev.com/2017/09/11/css-in-js.html)。
+
 ---
 
 最近，「CSS in JS」获得了大量的关注。原因很简单：CSS在运行在公共命名空间中，可能引发不好的副作用，导致代码混成一团（译注：原文是意大利面式代码），给维护代码库造成极大的困难。于是人们用JavaScript来解决这个问题，把所有的代码（CSS、JS）封装进模块里然后使用诸如Webpack之类的工具将一切缝合起来。看！JavaScript也可以处理CSS了，为什么我们不把所有的CSS也放进JavaScript里然后封装成模块呢！

@@ -1,4 +1,4 @@
- ![wedding](http://owyx09dkb.bkt.clouddn.com/wedding.png)
+ ![wedding](http://static.insomnia-er.com/wedding.png)
 
 
 > 说出来我自己都不信，十月份我在杭州和北京之间来回了三次。
