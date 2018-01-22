@@ -35,8 +35,8 @@ function request(url, method, params, successCallback, errorCallback) {
 } 
 
 function getWechatConifg() {
-    request('/wxconfig',
-        'GET', { url: encodeURIComponent(window.location.href.split('#')[0]) },
+    request('/wxconfig?url='+encodeURIComponent(window.location.href.split('#')[0]),
+        'GET',{},
         function(res) {
             var wxconfig = res; 
             wx.config({
