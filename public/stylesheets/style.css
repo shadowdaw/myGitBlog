@@ -512,8 +512,7 @@ body {
     color: #8c8c8c
 }
 
-.footer {
-    display: none;
+.footer { 
     padding: 25px 0;
     text-align: center;
     color: #8c8c8c;
@@ -529,8 +528,7 @@ body {
     height: 300px;
 }
 
-.end {
-    display: none;
+.end { 
     padding: 20px 0;
     font-size: 18px;
     color: #8c8c8c;
