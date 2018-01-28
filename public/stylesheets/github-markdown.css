@@ -316,6 +316,9 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+.markdown-body ol{
+  list-style:square
+}
 
 .markdown-body ol ol,
 .markdown-body ul ol {
