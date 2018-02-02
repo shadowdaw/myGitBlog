@@ -24,7 +24,7 @@ block content
 						div.thumbnail 
 							a(href="/blog/"+key)
 								if blog.imageUrl
-									div.poster(style=`background-image:url(${blog.imageUrl})`)
+									div.poster(data-echo-background=`${blog.imageUrl}`)
 								else
 									span #{blog.title}
 						div.info
@@ -32,7 +32,13 @@ block content
 								h4.title #{blog.title}
 							a.tag(href='/?tag='+blog.tag) #{blog.category}
 							span.infotime.pull-right #{blog.time}
+	script(type='text/javascript', src='/javascripts/echo.js')
 	script.
+		echo.init({
+			offset: 200,
+			throttle: 250,
+			unload: false
+		});
 		var openmenu=function(){
 			if(document.body.className==='open'){
 				document.body.className='';
