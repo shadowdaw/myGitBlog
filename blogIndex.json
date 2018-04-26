@@ -1,4 +1,12 @@
-{
+{ 
+    "my-religious-belief-simple":
+    {
+        "title": "我的宗教信仰",
+        "tag": "me",
+        "category": "我",
+        "time": "2018-04-26",
+        "imageUrl": "http://static.insomnia-er.com/create.jpg"
+    },
     "top-javascript-libraries-tech-to-learn-in-2018":
     {
         "title": "编&译: 2018年值得学习的热门JavaScript类库与技术。",
