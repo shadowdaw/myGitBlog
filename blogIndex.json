@@ -36,8 +36,8 @@
     "something-about-me":
     {
         "title": "那就聊聊自己吧",
-        "tag": "talk",
-        "category": "杂谈",
+        "tag": "me",
+        "category": "我",
         "time": "2018-1-22",
         "imageUrl": "http://static.insomnia-er.com/japan.jpg"
     },
